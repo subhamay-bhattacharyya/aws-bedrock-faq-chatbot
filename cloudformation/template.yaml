@@ -1,6 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
-Description: 'Root CloudFormation template that invokes nested stacks for AWS Receipt Processing System (S3 storage, Lambda processing)'
+Description: >-
+  Root CloudFormation for Intelligent FAQ Chatbot using Amazon Bedrock (RAG). Creates:- 
+  - S3 bucket (versioned, public access blocked, optional KMS encryption)
+  - IAM role for bedrock-agentcore.amazonaws.com with Bedrock RAG access, S3 read-only and KMS policies
 
 Metadata:
   AWS::CloudFormation::Interface:
